@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang ="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0"> 
+            <title>Crud Application</title>
+        <style>
+            body{
+                margin:0px;
+                padding: 0px;
+            }
+            .data{
+                font-family:segoe 'calibri', Tahoma, Geneva, Verdana, sans-serif;
+                height:500px;
+                width:80%;
+                /*background-color:lightgray;*/
+                margin-left:10%;
+                margin-top:50px;
+                padding:20px;
+            }
+            .table{
+                width:100;
+                margin-top:20px;
+                
+            }
+            th,
+            td{
+                height:40px;
+                text-align:center;
+                padding:5px;
+            }
+            .form{
+                margin-top:20px;
+            }
+            input{
+             height:40px;
+             text-indent:20px;
+            }
+            .modal{
+                width:100%;
+                height:100%;
+                background-color:rgba(0,0,0,0.5);
+                position:fixed;
+                display:none;
+            }
+            .modalchild{
+                height:500px;
+                width:70%;
+                background-color:white;
+                margin-left:15%;
+                margin-top:100px;
+                display:inline-block;
+            }
+        </style>
+        </head>
+        <body>
+            <div class="modal" onclick="hideModal(event)">
+              <div class='modalchild'></div>    
+            </div>
+            
+            <div class="data">
+                <h1>Superhero</h1>
+                <div class="form">
+                <form onsubmit="addSuperhero(event)">
+                    <input type="text" requird placeholder="Name" id="name"/>
+                    <input type="number" required placeholder="Age" id="age"/>
+                    <input type="text" required placeholder="Planet" id="planet"/>
+                    <input type="text" required placeholder="Height" id="height"/>
+                    <button type="submit">Add Superhero</button>
+                </form>
+                </div>
+                <div class="form">
+                    <input type="text" placeholder="Start Searching here "id="searchName"onkeyup='searchByName()'/>
+                
+                
+                </div>
+                <table border="1" class="table",cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Sr no</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Planet</th>
+                                <th>Height</th>
+                                <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tdata">
+                              <!----  <tr>
+                                    <td>1</td>
+                                    <td>Scarlet</td>
+                                    <td>23</td>
+                                    <td>Earth</td>
+                                    <td>5.4</td> 
+                               </tr>  -->
+                            </tbody>
+                    </table>
+            </div>
+
+
+            <script src="project1.js"></script>
+        </body>
+            </html>
